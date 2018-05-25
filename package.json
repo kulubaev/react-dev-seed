@@ -2,7 +2,9 @@
   "name": "react-dev-seed",
   "version": "0.0.1",
   "description": "js environment seed for react development",
-  "scripts": {},
+  "scripts": {
+    "start": ""
+  },
   "keywords": [
     "react",
     "js",
@@ -12,5 +14,9 @@
   "license": "ISC",
   "dependencies": {
     "nsp": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "express": "^4.16.3"
   }
 }
