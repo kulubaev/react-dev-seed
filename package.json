@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "description": "js environment seed for react development",
   "scripts": {
-    "launch-dev-server": "babel-node scripts/dev-server.js",
     "validate": "nsp check",
-    "start": "npm-run-all --parallel launch-dev-server "
+    "lint": "esw --color src scripts",
+    "lint:watch": "npm run lint -- --watch",
+    "launch-dev-server": "babel-node scripts/dev-server.js",
+    "start": "npm-run-all --parallel launch-dev-server lint:watch"
   },
   "keywords": [
     "react",
@@ -18,8 +20,12 @@
     "nsp": "^3.2.1"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-watch": "^3.1.5",
     "express": "^4.16.3",
     "npm-run-all": "^4.1.3",
     "open": "^0.0.5"
