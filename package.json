@@ -1,0 +1,16 @@
+{
+  "name": "react-dev-seed",
+  "version": "0.0.1",
+  "description": "js environment seed for react development",
+  "scripts": {},
+  "keywords": [
+    "react",
+    "js",
+    "seed"
+  ],
+  "author": "@kulubaev",
+  "license": "ISC",
+  "dependencies": {
+    "nsp": "^3.2.1"
+  }
+}
