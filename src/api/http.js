@@ -1,17 +1,15 @@
 import uri from './uri';
 
-const success = resp => {
-  return resp.json();
-};
-
-const error = error => {
-  /*eslint-disable no-console*/
-  console.error(error);
-  /*eslint-enable no-console*/
-};
-
 export default class {
-  static get(url) {
-    return fetch(uri + url).then(success, error);
+  static async get(url) {
+    try {
+      const response = await fetch(uri + url);
+      const data = await response.json();
+
+      return data;
+    } catch (error) {
+      /*eslint-disable no-console*/
+      console.error(error);
+    }
   }
 }
