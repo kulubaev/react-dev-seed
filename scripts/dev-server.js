@@ -18,7 +18,7 @@ app.use(require('webpack-dev-middleware')(compiler, {
 app.use(require('webpack-hot-middleware')(compiler));
 
 app.get('*', (req, resp) => {
-  resp.sendFile(path.join(__dirname, '../app/index.html'));
+  resp.sendFile(path.join(__dirname, '../src/index.html'));
 })
 
 app.listen(port, (err) => {

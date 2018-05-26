@@ -12,10 +12,10 @@ export default merge(
     mode: 'development',
     devtool: 'inline-source-map',
     entry:[
-      path.resolve(__dirname, '../app/index')
+      path.resolve(__dirname, '../src/app/index')
     ],
     output: {
-      path: path.resolve(__dirname, 'app'),
+      path: path.resolve(__dirname, 'src/app'),
       publicPath: '/',
       filename: 'bundle.js',
     },
