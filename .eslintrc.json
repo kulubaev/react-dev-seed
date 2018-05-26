@@ -3,7 +3,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:import/errors",
-    "plugin:import/warnings"
+    "plugin:import/warnings",
+    "prettier"
   ],
   "parserOptions": {
     "ecmaVersion": 8,
@@ -13,11 +14,13 @@
     "browser": true,
     "node": true,
     "jest": true
-
   },
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
     "no-unused-vars": 1,
-    "no-console": 1
+    "no-console": 1,
+    "prettier/prettier": 2
   }
-
 }
