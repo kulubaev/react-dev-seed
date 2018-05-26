@@ -1,16 +1,10 @@
 import path from 'path';
 
 export default {
-
   resolve: {
-    modules: [
-      path.resolve(__dirname, 'src'),
-      'node_modules',
-    ],
-    alias: {
-
-    },
-    extensions: ['.js', '.jsx', '.json'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    alias: {},
+    extensions: ['.js', '.jsx', '.json']
   },
 
   module: {
@@ -19,7 +13,7 @@ export default {
         test: /\.(js|jsx)$/,
         use: 'babel-loader',
         include: path.join(__dirname, 'src'),
-        exclude: ['(node_modules|dist)'],
+        exclude: ['(node_modules|dist)']
       },
 
       {
@@ -27,14 +21,14 @@ export default {
         include: path.join(__dirname, 'src'),
         exclude: ['(node_modules|dist)'],
 
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader']
       },
 
       {
         use: 'url-loader?limit=10000',
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        include: path.join(__dirname, 'src'),
-      },
-    ],
-  },
+        include: path.join(__dirname, 'src')
+      }
+    ]
+  }
 };
