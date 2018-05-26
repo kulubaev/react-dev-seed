@@ -1,3 +1,4 @@
+//@flow
 import httpApi from '../api/http';
 /*eslint-disable no-console*/
 console.log('starting app');
