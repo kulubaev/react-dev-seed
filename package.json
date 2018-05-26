@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "js environment seed for react development",
   "scripts": {
+    "static-check-type": "flow",
     "validate": "nsp check",
     "lint": "esw --color src scripts",
     "lint:watch": "npm run lint -- --watch",
@@ -34,6 +35,7 @@
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-watch": "^3.1.5",
     "express": "^4.16.3",
+    "flow-bin": "^0.73.0",
     "html-webpack-plugin": "^3.2.0",
     "json-schema-faker": "^0.5.0-rc15",
     "json-server": "^0.12.2",
