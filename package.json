@@ -5,13 +5,15 @@
   "scripts": {
     "static-check-type": "flow",
     "validate": "nsp check",
+    "test": "jest --coverage",
+    "test:watch": "npm run test --  --watch",
     "lint": "esw --color src scripts",
     "lint:watch": "npm run lint -- --watch",
     "mock-data": "babel-node scripts/mock-data.js",
     "launch-dev-server": "babel-node scripts/dev-server.js",
     "prelaunch-mock-api": "npm run mock-data",
     "launch-mock-api": "json-server --watch src/api/mock/data.json --port 5000",
-    "start": "npm-run-all --parallel launch-dev-server lint:watch launch-mock-api"
+    "start": "npm-run-all --parallel launch-dev-server lint:watch test:watch launch-mock-api"
   },
   "keywords": [
     "react",
@@ -20,16 +22,16 @@
   ],
   "author": "@kulubaev",
   "license": "ISC",
-  "dependencies": {
-    "nsp": "^3.2.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
+    "babel-jest": "^23.0.1",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
     "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
     "chalk": "^2.4.1",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
@@ -40,9 +42,13 @@
     "express": "^4.16.3",
     "flow-bin": "^0.73.0",
     "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.0.1",
+    "jest-cli": "^23.0.1",
     "json-schema-faker": "^0.5.0-rc15",
     "json-server": "^0.12.2",
     "npm-run-all": "^4.1.3",
+    "nsp": "^3.2.1",
     "open": "^0.0.5",
     "prettier": "^1.12.1",
     "webpack": "^4.9.1",

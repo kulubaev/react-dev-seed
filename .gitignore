@@ -1,3 +1,5 @@
+coverage/
 node_modules/
 yarn-error.log
-mock-data.json
+src/api/mock/data.json
+
