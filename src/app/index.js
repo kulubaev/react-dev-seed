@@ -1,20 +1,8 @@
-//@flow
-import httpApi from '../api/http';
-/*eslint-disable no-console*/
-console.log('starting app');
+import React from 'react';
+import { render } from 'react-dom';
+import module1 from './module';
 
-httpApi.get('/users').then(response => {
-  let result = '';
-  response.forEach(user => {
-    result += `<tr>
-        <td>${user.id}</td>
-        <td>${user.firstName}</td>
-        <td>${user.lastName}</td>
-        <td>${user.email}</td>
-      </tr>`;
-  });
+let { Container } = module1.components;
+render(<Container />, document.getElementById('app'));
 
-  global.document.getElementById('users').innerHTML = result;
-});
-
-/*eslint-enable no-console*/
+module.hot.accept();

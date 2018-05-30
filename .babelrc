@@ -4,12 +4,9 @@
     "flow",
     "react",
   ],
-  "env": {
-    "test": {
-      "presets":[["env"],"react" ]
-    }
-  },
   "plugins": [
+    "react-hot-loader/babel",
+    "transform-object-rest-spread",
     "transform-flow-strip-types"
   ]
 }

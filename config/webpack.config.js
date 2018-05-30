@@ -10,24 +10,15 @@ export default {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
-        use: 'babel-loader',
-        include: path.join(__dirname, 'src'),
-        exclude: ['(node_modules|dist)']
-      },
-
-      {
         test: /\.css$/,
-        include: path.join(__dirname, 'src'),
-        exclude: ['(node_modules|dist)'],
-
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],
+        exclude: [/node_modules/]
       },
 
       {
         use: 'url-loader?limit=10000',
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,
-        include: path.join(__dirname, 'src')
+        exclude: [/node_modules/]
       }
     ]
   }
