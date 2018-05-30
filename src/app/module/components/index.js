@@ -1,2 +1,1 @@
-//index.js
-//
+export { Container } from './container';
