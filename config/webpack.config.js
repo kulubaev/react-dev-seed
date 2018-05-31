@@ -1,4 +1,5 @@
 import path from 'path';
+import CssExtract from 'mini-css-extract-plugin';
 
 export default {
   resolve: {
@@ -9,12 +10,6 @@ export default {
 
   module: {
     rules: [
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
-        exclude: [/node_modules/]
-      },
-
       {
         use: 'url-loader?limit=10000',
         test: /\.(png|woff|woff2|eot|ttf|svg)$/,

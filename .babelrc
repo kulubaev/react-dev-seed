@@ -7,6 +7,14 @@
   "plugins": [
     "react-hot-loader/babel",
     "transform-object-rest-spread",
-    "transform-flow-strip-types"
+    "transform-flow-strip-types",
+    ["react-css-modules", {
+      "generateScopedName": "[local]___[hash:base64:5]",
+      "filetypes": {
+        ".scss": {
+          "syntax": "postcss-scss"
+        }
+      }
+    }]
   ]
 }
